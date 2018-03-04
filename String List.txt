@@ -1,0 +1,5 @@
+A List of Strings used in the program allowing for multiple local settings - Add more when you need them
+
+okKey - Used for OK buttons
+cancelKey - Used for cancel buttons
+modulePageTitle - Used for list of modules

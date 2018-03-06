@@ -17,11 +17,11 @@
      }
  }
 
- // German language
+ // Japanese language
  public class MyResources_jp extends MyResources {
      public Object handleGetObject(String key) {
          // don't need okKey, since parent level handles it.
-         if (key.equals("cancelKey")) return "ƒLƒƒƒ“ƒZƒ‹";
+         if (key.equals("cancelKey")) return "Æ’LÆ’Æ’Æ’â€œÆ’ZÆ’â€¹";
          return null;
      }
 

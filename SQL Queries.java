@@ -683,7 +683,215 @@ ForumComments – ClientID, PostID, CommentContent, CommentTime, CommentDate
 */
 //Creation of object classes for each entry in each table for this section
 
+public class ForumAdministrationRightsRecord(int inputAdministractionRightsID, int inputForumID, boolean inputCommentDeleteRight, boolean inputBanRight, boolean inputKickRight){
+	public static void main(String argv[]){
+		int AdministractionRightsID = inputAdministataionRightsID;
+		int ForumID = inputForumID;
+		boolean CommentDeleteRight = inputCommentDeleteRight;
+		boolean BanRight = inputBanRight;
+		boolean KickRight = inputKickRight;
+	}
+	
+	public int getAdministrationRightsID(){
+		return AdministractionRightsID;
+	}
+	
+	public int getForumID(){
+		return ForumID;
+	}
+	
+	public boolean getCommentDeleteRight(){
+		return CommentDeleteRight;
+	}
+	
+	public boolean getBanRight(){
+		return BanRight;
+	}
+	
+	public boolean getKickRight(){
+		return KickRight;
+	}
+	
+	public void setAdministrationRightsID(int newAdministratioRightsID){
+		AdministractionRightsID = newAdministratioRightsID;
+	}
+	
+	public void setForumID(int newForumID){
+		ForumID = newForumID;
+	}
+	
+	public void setCommentDeleteRight(boolean newCommentDeleteRight){
+		CommentDeleteRight = newCommentDeleteRight;
+	}
+	
+	public void setBanRight(boolean newBanRight){
+		BanRight = newBanRight;
+	}
+	
+	public void setKickRight(boolean newKickRight){
+		KickRight = newKickRight;
+	}
+}
 
+public class GivenForumAdministrationRightsRecord(int inputClientID, int inputForumID, int inputAdministataionRightsID){
+	public static void main(String argv[]){
+		int ClientID = inputClientID;
+		int ForumID = inputForumID;
+		int AdministrationRightsID = inputAdministataionRightsID;
+	}
+	
+	public int getClientID(){
+		return ClientID;
+	}
+	
+	public int getForumID(){
+		return ForumID;
+	}
+	
+	public int getAdministrationRightsID(){
+		return AdministractionRightsID;
+	}
+	
+	public void setClientID(int newClientID){
+		ClientID = newClientID;
+	}
+	
+	public void setForumID(int newForumID){
+		ForumID = newForumID;
+	}
+	
+	public void setAdministrationRightsID(int newAdministratioRightsID){
+		AdministractionRightsID = newAdministratioRightsID;
+	}
+}
+
+public class ForumPostRecord(int inputCreatorID, String inputPostContent, int inputForumID){
+	public static void main(String argv[]){
+		int CreatorID = inputCreatorID;
+		String PostContent = inputPostContent;
+		int ForumID = inputForumID;
+	}
+	
+	public int getCreatorID(){
+		return CreatorID;
+	}
+	
+	public String getPostContent(){
+		return PostContent;
+	}
+	
+	public int getForumID(){
+		return ForumID;
+	}
+	
+	public void setCreatorID(int newCreatorID){
+		CreatorID = newCreatorID;
+	}
+	
+	public void setPostContent(String newPostContent){
+		PostContent = newPostContent;
+	}
+	
+	public void setForumID(int newForumID){
+		ForumID = newForumID;
+	}
+}
+
+public class ForumsRecord(int inputForumID, String inputForumName, String inputForumDescription){
+	public static void main(Strings argv[]){
+		int ForumID = inputForumID;
+		String ForumName = inputForumName;
+		String ForumDescription = inputForumDescription;
+	}
+	
+	public int getForumID(){
+		return ForumID;
+	}
+	
+	public String getForumName(){
+		return ForumName;
+	}
+	
+	public String getForumDescription(){
+		return ForumDescription;
+	}
+	
+	public void setForumID(int newForumID){
+		ForumID = newForumID;
+	}
+	
+	public void setForumName(String newForumName){
+		ForumName = newForumName;
+	}
+	
+	public void setForumDescription(String newForumDescription){
+		ForumDescription = newForumDescription;
+	}
+}
+
+public class ForumParticipationRecord(int inputClientID, int inputForumID){
+	public static void main(String argv[]){
+		int ClientID = inputClientID;
+		int ForumID = inputForumID;
+	}
+	
+	public int getClientID(){
+		return ClientID;
+	}
+	
+	public int getForumID(){
+		return ForumID;
+	}
+	
+	public void setClientID(int newClientID){
+		ClientID = newClientID;
+	}
+	
+	public void  setForumID(int newForumID){
+		ForumID = newForumID;
+	}
+}
+
+public class ForumCommentsRecord(int inputClientID, int inputPostID, String inputCommentContent, Date inputCommentDate){
+	public static void main(String argv[]){
+		int ClientID = inputClientID;
+		int PostID = inputPostID;
+		String CommentContent = inputCommentContent;
+		Date CommentDate = inputCommentDate;
+	}
+	
+	public int getClientID(){
+		return ClientID;
+	}
+	
+	public int getPostID(){
+		return PostIDl
+	}
+	
+	public String getCommentContent(){
+		return CommentContent;
+	}
+	
+	public Date getCommentDate(){
+		return CommentDate;
+	}
+	
+	public void setClientID(int newClientID){
+		ClientID = newClientID;
+	}
+	
+	public void setPostID(int newPostID){
+		PostID = newPostID;
+	}
+	
+	public void setCommentContent(String newCommentContent){
+		CommentContent = newCommentContent;
+	}
+	
+	public void setCommentDate(Date newCommentDate){
+		CommentDate = newCommentDate;
+	}
+}
 
 public class ForumReader implements DatabaseReader{//Reads all information about forums in the system
 	

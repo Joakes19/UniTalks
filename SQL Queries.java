@@ -271,8 +271,35 @@ public class ClientReader implements DatabaseReader{//Reads all information pert
 	/*Modify all generic reader statements to only access the client table 
 	So I will create several different functions, one for each possible circumstance that the table may need to be read
 	*/
+	//Function to read the Client table
+	public ClientRecord readClient(){
+		
+	}
 	
+	//Function to read the ClientUniversityAttendanceTable
+	public ClientUniversityAttendanceRecord readClientUniversityAttendance(){
+		
+	}
 	
+	//Function to read the client topic of study table
+	public ClientTopicOfStudyRecord readClientTopicOfStudy(){
+		
+	}
+	
+	//Function to read the client halls floor table
+	public ClientHallsFloorRecord readClientHallsFloor(){
+		
+	}
+	
+	//Function to read the client halls room table
+	public ClientHallsRoomRecord readClientHallsRoom(){
+		
+	}
+	
+	//Function to read the client email address table
+	public ClientEmailAddressRecord readClientEmailAddressRecord(){
+		
+	}
 }
 
 public class ClientWriter implements DatabaseWriter{//Writes all information pertaining to clients in the system

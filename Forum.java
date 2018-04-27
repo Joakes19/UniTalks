@@ -30,6 +30,9 @@ class Forum{
 	public String getCreator(){
 		return this.creator;
 	}
+	public ArrayList<Post> getPosts(){
+		return posts;
+	}
 	///////////////////////////////
 	
 	

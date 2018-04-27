@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
-// Forum Holds posts, a title and description
+// Forum Holds creator, posts, a title and description
 class Forum{
 	String creator;
 	String title;

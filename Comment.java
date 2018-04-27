@@ -23,7 +23,7 @@ class Comment {
 	public String getBody(){
 		return this.body;
 	}
-	public String getReplies(){
+	public ArrayList<Comment> getReplies(){
 		return replies;
 	}
 	public String getCommentDateTime(){

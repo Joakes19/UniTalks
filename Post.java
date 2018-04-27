@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
-// Post has title, description and comments
+// Post has poster, title, description and comments
 class Post {
 	String poster;
 	String title;

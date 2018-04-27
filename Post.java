@@ -30,7 +30,7 @@ class Post {
 	public String getPoster(){
 		return this.poster;
 	}
-	public String getComments(){
+	public ArrayList<Comment> getComments(){
 		return comments;
 	}
 	///////////////////////////////

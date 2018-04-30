@@ -3,7 +3,6 @@
 require_once 'config.php';
 
 $username = $_SESSION['Username'];
-$URL = $_SERVER['REQUEST_URI'];
 $sql = "SELECT GroupChatParticipation.GroupChatID,GroupChatName FROM GroupChats JOIN GroupChatParticipation ON GroupChats.GroupChatID = GroupChatParticipation.GroupChatID JOIN Client ON GroupChatParticipation.ClientID = Client.Client_ID WHERE Username =? ORDER BY GroupChatName";
 
 if ($stmt = $mysqli->prepare($sql)) {

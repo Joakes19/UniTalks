@@ -1,0 +1,407 @@
+ html{
+	 height:100%;
+ }
+ body {
+    font: 14px sans-serif;
+    color: black;
+	margin:0px;
+	/*background-color:#f7f9f9;*/
+	background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	height:100%;
+}
+		/*Mobile version*/
+	@media screen and (max-width : 720px){
+		#footer{
+			padding-bottom:40px;
+		}
+		#footer span#html5,span#pp{
+			display:inline;
+		}
+
+		.form {
+			width:80%;
+		}
+		.form textarea,input{
+			width:95%; /* ustalamy szerokość */
+		}
+		.not_mobile{
+			display:none;
+		}
+		header a{
+			position:absolute;
+			font-size: 30px;
+			line-height:50px;
+			padding-left:10px;
+			padding-right:10px;
+			vertical-align:middle;
+			top:0;
+			bottom:0;
+		}
+		header img{
+			height:46px;
+		}
+	}
+	
+	@media screen and (min-width : 721px){
+		
+		.mobile{
+			display:none;
+		}
+		#footer span#pp{
+			display:none;
+		}
+		#footer #polityka{
+			float:left;
+			padding-left:0.5em
+		}
+		.form {
+			width:30%;
+		}
+		.form textarea,input{
+			width:80%; /* ustalamy szerokość */
+		}
+		header a{
+			position:absolute;
+			font-size: 30px;
+			line-height:50px;
+			padding-left:10px;
+			padding-right:10px;
+			vertical-align:middle;
+			top:0;
+			bottom:0;
+		}	
+		header img{
+			height:46px;
+		}
+			
+	}
+	
+	/*Title Class*/	
+	header{
+		position:absolute;
+		text-align: center;
+		height:50px;
+		top:0;
+		width:100%;
+	}
+	header, nav.forumList{
+		box-shadow: 0 1px 3px grey;
+	}
+	header{
+		color: black;
+		background-color: #f5f5f5;
+		text-decoration: none;
+
+	}
+	
+	header{
+		z-index:200;
+	}
+	nav, div.settings, div.forum, div.chats{
+		z-index:10;
+	}
+	
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: red;
+	}
+
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: red;
+	}
+
+	::-ms-input-placeholder { /* Microsoft Edge */
+		color: red;
+	}
+	
+	/*Navigation Bar - Always on Top*/
+	.over{
+		overflow:hidden !important;
+	}
+	nav{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		overflow: auto;
+	}
+
+	nav a, a.logout{
+		text-align: center;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+	
+	header nav{
+		background-color: #f7f9f9;
+		box-shadow: 1px 1px 3px grey;
+	}
+	header nav a, a.logout{
+		color: black;
+
+	}
+	
+	header nav a.right{
+		box-shadow: -1px 1px 3px grey;
+		right:0;
+	}
+	a.logout{
+		box-shadow: 0px 0px 3px grey;
+		padding:3px;
+	}
+	header nav a.left{
+		box-shadow: 1px 1px 3px grey;
+		left:0;
+	}
+	/*Navigation Bar liinks on hover*/
+	nav a:hover, a.logout:hover{
+		background-color: #94c8fd;
+	}
+	
+	/*Navigation Bar block when active*/
+	nav a.active{
+		background-color: #94c8fd;
+	}
+	
+	nav.forumList{
+		white-space: nowrap;
+		background-color:#f7f9f9;
+	}
+	
+	nav.chatList{
+		background-color:#f7f9f9 ;
+		display:block;
+		text-align:left !important;
+	}
+	nav.chatList ul{
+		list-style-type: none;
+	}
+	
+	nav.chatList a{
+		padding:0.2em;
+		color:black;
+	}
+	nav.forumList a{
+		font-size:25px;
+		padding:5px;
+		color:black;
+		box-shadow: 0px 0px 3px grey;
+	}
+	nav.chatList a{
+		font-size:1.5em;
+	}
+	div.wrapper{
+		position:absolute;
+		width: 100%;
+		overflow: auto;
+		top:50px;
+		bottom:0px;
+	}
+	div.container{
+		position:absolute;
+		width:80%;
+		top:0px;
+	}
+	div.forum{
+		position:absolute;
+		top:0;
+		width:80%;
+		line-height:35px;
+
+	}
+	
+
+	div.chats{
+		position:absolute;
+		width:20%;
+		overflow:auto;
+		top:0;
+		bottom:0;
+		background-color: #f7f9f9;
+	}
+	
+	div.container-chats{
+		position:absolute;
+		top:0;
+		bottom:0;
+		margin-left:20%;
+		width:60%;
+		overflow:hidden;
+	}
+	div.chat-input{
+		position:absolute;
+		background-color:white;
+		height:10%;
+		width:100%;
+		bottom:0;
+	}
+	div.chat-display{
+		position:absolute;
+		background-color:lightblue;
+		top:0;
+		width:100%;
+		height:90%;
+		overflow-y:auto;
+		overflow-x:hidden;
+		text-align: left !important;
+		white-space:normal;
+	}
+	
+	div.container-forum{
+		position:absolute;
+		top:35px;
+		bottom:0;
+		width:80%;
+		overflow:hidden;
+		background-color: white;
+	}
+	
+	
+	div.settings{
+		position:absolute;
+		margin-left:80%;
+		box-shadow: -1px 0 3px grey;
+		background-color:#f7f9f9;
+		top:0;
+		bottom:0;
+		overflow: auto;
+		padding: 0 2em;
+	}
+	
+	div.admins, div.report, div.other{
+		border-bottom: 2px solid red;
+	}	
+	
+	
+
+	
+  main{
+	  text-align:center;
+	  margin-top:10px;
+  }
+
+  .fixed-footer{
+	  	position:fixed;
+		width:100%;
+		bottom:0;
+  }
+  
+
+  #input{
+	  text-align:center;
+  }
+  .form {
+        margin: 20px auto; /* jeżeli nasz .form ma ustawioną szerokość wyśrodkowujemy go */
+        background-color:#fff; /* dodajemy kolor tła naszemu .formowi */
+        border:2px solid #ccc; /* dodajemy obramowanie o szerokości 2px */
+        border-radius:10px; /* zaokrąglamy tło naszego .forma */
+		padding:2em; /* dodajemy margines wewnątrz naszego .forma */
+}
+
+.form label {
+    display:block;/* ustawiamy by label rozpoczynał się od nowej linii*/
+    margin-bottom:5px;/* dodajemy margines dolny */
+    font-weight:bold; /* pogrubiamy czcionkę */
+    text-transform: uppercase; /* zamieniamy wszystkie litery na duże */
+	text-align:center;
+    font-size:1em; /* ustawiamy wielkość czcionki */
+    color:#555555; /* ustawiamy kolor czcionki */
+}
+
+.form textarea,
+.form input {
+	text-align: center;
+	padding:5px; /* dodajemy margines wewnątrz naszego pola */
+	border-radius:3px; /* dodajemy zaokraglone rogi */
+	font-family: "Arial", Sans-serif;
+	margin-bottom:25px; /* dodajemy margines dolny */
+	transition: all 0.3s ease;
+	font-size: 0.9em;
+	border:1px solid #ccc; /* dodajemy obramowanie */
+}
+
+.form textarea:hover,
+.form input:hover{
+	border-color: #6B74A8; /* dodajemy obramowanie */
+}
+
+.form textarea{
+	resize: vertical;
+}
+
+.form input#submit {
+	width:50%; /* ustalamy szerokość */
+	cursor:pointer; /* zmieniamy kursor */
+	margin-bottom:0px;/* resetujemy margines dolny */
+}
+
+.form p.copy {
+	color:#555555; /* ustawiamy kolor czcionki */
+	margin-bottom:0px; /* resetujemy margines dolny */
+	font-size:12px; /* ustawiamy rozmiar czcionki */
+	text-align: center; /* wyśrodkowywujemy tekst */
+}
+
+.form p.copy a {
+	color:#555555;/* ustawiamy kolor czcionki */ 
+	text-decoration: none; /* usuwamy podkreślenie linku */
+	font-weight:bold; /* pogrubiamy czcionkę */
+}
+
+  address {
+    margin-top: 1px;
+    padding-top: 1px;
+	margin-left:1px;
+    }
+	  
+	  
+	  
+	/* The Overlay (background) */
+	.display{
+		display:block !important;
+	}
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 500; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 15%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a, .overlay span {
+    padding: 0.2em;
+    text-decoration: none;
+    font-size:1.8em;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.2s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus, .overlay span:hover, .overlay span:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 0.1em;
+    right: 0.1em;
+    font-size: 3em;
+}

@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             save the Username to the session */
                             session_start();
                             $_SESSION['Username'] = $Username;
-                            header("location: welcome.php");
+                            header("location: Chats.php");
                         } else{
                             // Display an error message if Password is not valid
                             $Password_err = 'The password you entered was not valid.';

@@ -1,13 +1,4 @@
-<?php
-// Initialize the session
-session_start();
- 
-// If session variable is not set it will redirect to login page
-if(!isset($_SESSION['Username']) || empty($_SESSION['Username'])){
-  header("location: login.php");
-  exit;
-}
-?>
+<?php require_once 'session.php'?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -18,14 +9,23 @@ if(!isset($_SESSION['Username']) || empty($_SESSION['Username'])){
 <?php require "header.php";?>
 <div class="wrapper">
 <div class="chats">
-<nav class="chatList">
+	<nav class="chatList">
 	<?php require "available_chats.php"?>
 	</nav>
 </div>
 <div class="container-chats">
 	<main>
-		<?php echo $_SERVER['REQUEST_URI'] ?>
-	<p>JAVA PROGRAM HERE</p>
+		<div id="display" class = "chat-display">
+		</div>
+		<div class = "chat-input">
+			<form name="message" action="">
+				<div class="chat-message">
+                <label>Your message: </label>
+                <input type="text" name="user-message" id="user-message" disabled>
+				<input type="submit" name="submit" id="submit" value="Send" disabled>
+				</div>
+			</form>
+		</div>
 	</main>
 </div>
 <?php require "settings.php";?>

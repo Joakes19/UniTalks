@@ -1,5 +1,4 @@
-<script src="active.js" type="text/javascript"></script>
-<script src="footer.js" type="text/javascript"></script>
+
   <script>/* Open when someone clicks on the span element */
 function openNav() {
 	$('body').addClass('over');
